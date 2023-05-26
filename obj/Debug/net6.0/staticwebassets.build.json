@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AkEJr97esQwKXoiLrptH/POa0gNQS5pDPijeaZXQfXQ=",
+  "Source": "PortalForBidding.MySQL",
+  "BasePath": "_content/PortalForBidding.MySQL",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PortalForBidding.MySQL.props" />
+</Project>
