@@ -1,27 +1,22 @@
-# FrontEnd
+# Project--Portal For Bidding Website
+Website for bidding between Farmers and Consumers A portal where farmers can upload the data of grains/veggies/fruits produced along with the quantity, etc and consumers can directly bid with the farmers.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
+### Project Modules:
+#### Farmer module functionalities:
+The farmers can:
+* add new products
+* view the added products
+* edit/update the products
+* delete the products
+* Accept/Reject the consumer's bidding
+#### Consumer module functionalities:
+The cosnuemrs can:
+* view the added products
+* Bid for the product(must higher than the base price)
+* give the consumer's details
+* the bidding will be decided by the corresponding farmer
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Requirements:
+* FrontEnd: Angular Framework 
+* BackEnd: ASP.NET Core Web API
+* Database: MySQL 
