@@ -38,4 +38,5 @@ export const urls = {
 
     // consumer's Bid Now API
     consumerBidNow_ASPUrl: "https://localhost:7052/api/Consumers/consumerBidNow"
-}
+} 
+// end
