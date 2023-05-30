@@ -70,6 +70,9 @@ export class ApiService {
   updateProductByFarmer_ASPUrl = urls.updateProductByFarmer_ASPUrl;
   deleteProductByFarmer_ASPUrl = urls.deleteProductByFarmer_ASPUrl;
 
+  // Consumer's Bid Now
+  consumerBidNow_ASPUrl = urls.consumerBidNow_ASPUrl;
+
   // farmer's methods using asp.net
   getFarmProductList_asp() {
     return this.httpClient.get(this.farmerProductList_ASPUrl);
@@ -101,6 +104,10 @@ export class ApiService {
   }
   deleteProductInfoByFarmer_asp( id: number){
     return this.httpClient.delete(this.deleteProductByFarmer_ASPUrl + id);
+  }
+
+  consumerBidNow(data: any){
+    return this.httpClient.post(this.consumerBidNow_ASPUrl, data)
   }
 
 }

@@ -20,38 +20,37 @@ export class BidNowDialogComponent {
     private dialogRef: MatDialogRef<BidNowDialogComponent>) { }
 
   ngOnInit() {
-    let bidPrice = this.item.product_base_price; //100
+    let minBidPrice = this.item.productBasePrice; //100
     this.consumerForm = this.formBuilder.group({
       id:this.item.id,
       consumerName:['',[Validators.required, Validators.pattern(GlobalConstants.nameRegex)]],
       consumerMail:['',[Validators.required, Validators.pattern(GlobalConstants.emailRegex)]],
-      consumerBidPrice:['',[Validators.required,Validators.min(bidPrice)]]
+      consumerBidPrice:['',[Validators.required,Validators.min(minBidPrice)]]
     });
-
-    // console.log('row value details in bid now comp:',this.item);
-    // console.log('id',this.item.id,'base price',this.item.product_base_price)
+    console.log("consumer form before filling data: ",this.consumerForm.value);
   }
 
   confirmBid() {
     var consumerData = this.consumerForm.value;
     var data = {
-      consumer_name: consumerData.consumerName,
-      consumer_mail_id: consumerData.consumerMail,
-      farmer_id: this.item.id,
-      bidded_price: consumerData.consumerBidPrice
+      consumerName: consumerData.consumerName,
+      consumerMailId: consumerData.consumerMail,
+      farmerId: this.item.id,
+      biddedPrice: consumerData.consumerBidPrice
     }
-    // console.log('bidprice',data.bidded_price);
+    console.log("Consumer's Portal: after confirm bid: consumer data",consumerData);
+    console.log("Consumer's Portal: after confirm bid:",data);
 
     if (this.consumerForm.valid) {
-      this.api.consumerAdd(data).subscribe({
+      this.api.consumerBidNow(data).subscribe({
         next: (response: any) => {
-          console.log('subcribed');
-          alert("consumer bidded successfully");
+          // console.log('subcribed');
+          alert("Consumer's Portal: consumer bidded for the prodcut successfully");
           this.consumerForm.reset();
           this.dialogRef.close('bidded');
         },
         error: (error: any) => {
-          alert("error in bidding the product");
+          alert("Consumer's Portal: error in bidding the product by the consumer");
         }
       })
     }

@@ -24,7 +24,7 @@ export const urls = {
     // farmer's portal ASP urls
     farmerProductList_ASPUrl: "https://localhost:7052/api/Farmers",
     farmerBiddedProduct_ASPUrl: "https://localhost:7052/api/Consumers/join",
-    farmerProfile_ASPUrl: "https://localhost:7052/api/Farmers/getFarmerProfile",
+    farmerProfile_ASPUrl: "https://localhost:7052/api/Farmers/getFarmerProfile", 
 
     // products
     // add new product by farmer
@@ -35,4 +35,7 @@ export const urls = {
 
     // delete product by farmer
     deleteProductByFarmer_ASPUrl: "https://localhost:7052/api/Farmers/deleteFarmerInfoByID/",
+
+    // consumer's Bid Now API
+    consumerBidNow_ASPUrl: "https://localhost:7052/api/Consumers/consumerBidNow"
 }
